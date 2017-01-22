@@ -1,19 +1,48 @@
+
 header{
-	background-color:#57E947;
+	background-color:#7BC342;
 }
 
 
 article{
-	background-color: #4778E9;
+	background-color: #BDC3C6;
 }
 
 
 footer{
-	background-color: #47A8E9;
+	background-color: #006594;
 }
 
 
 aside{
-	background-color: #52E947;
+	background-color: #6B7552;
 }
+
+/*
+		Estilo 1
+
+header{
+	background-color:#4A6D18;
+}
+
+
+article{
+	background-color: #FFFFFF;
+}
+
+
+footer{
+	background-color: #524D4A;
+}
+
+
+aside{
+	background-color: #6B7552;
+}
+
+
+*/
+
+
+
 

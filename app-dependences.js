@@ -14,7 +14,14 @@ angular.module('pagina',['ngRoute'])
 	.when('/servicios',{
 		templateUrl : "templates/servicios.html",
 		controller : "serviciosController"
-	}).otherwise('templates/home.html');
+	})
+	.when('/aprendiendoBoot',{
+		templateUrl:'templates/boots.html',
+	})
+	.when('/aprendiendoBoot',{
+		templateUrl:'templates/formsBoot.html',
+	})
+	.otherwise('templates/boots.html');
 
 
 	$locationProvider.html5Mode(false);
