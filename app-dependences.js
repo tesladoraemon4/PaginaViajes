@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('pagina',['ngRoute'])
+angular.module('pagina',['ngRoute','ngAnimate'])
 .config(function($routeProvider,$locationProvider) {
 	$routeProvider
 	.when('/',{
@@ -16,10 +16,12 @@ angular.module('pagina',['ngRoute'])
 		controller : "serviciosController"
 	})
 	.when('/aprendiendoBoot',{
-		templateUrl:'templates/boots.html',
+		templateUrl:'templates/imagenes.html',
+		controller:'ControlX'
 	})
-	.when('/aprendiendoBoot',{
-		templateUrl:'templates/formsBoot.html',
+	.when('/aprendiendoAngular',{
+		templateUrl:'templates/Angular/angularAnimate.html',
+		controller:'angularAnimate'
 	})
 	.otherwise('templates/boots.html');
 
