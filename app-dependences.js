@@ -1,7 +1,29 @@
 'use strict';
 
-angular.module('pagina',['ngRoute','ngAnimate'])
+angular.module('pagina',['ngRoute','ngAnimate','agregarBoton'])
 .config(function($routeProvider,$locationProvider) {
+
+
+
+
+	//consultamos las rutas
+	
+	for (var i=0;i<localStorage.length;i++) {
+		var ruta = localStorage.key(i);
+		var nombre = localStorage.getItem(x);
+		$routeProvider
+		.when('/'+nombre,
+			{
+			templateUrl:ruta,
+			controller:'ControlX'
+		});
+
+	}
+
+
+
+
+
 	$routeProvider
 	.when('/',{
 		templateUrl : "templates/home.html",
@@ -15,17 +37,24 @@ angular.module('pagina',['ngRoute','ngAnimate'])
 		templateUrl : "templates/servicios.html",
 		controller : "serviciosController"
 	})
+	.when('/agregarRuta',{
+		templateUrl:'agregar-boton/formularioRutas.html',
+		controller:'formRutas'
+	}).otherwise('templates/boots.html');
+
+
+/*
+
 	.when('/aprendiendoBoot',{
-		templateUrl:'templates/imagenes.html',
+		templateUrl:'templates/botonMenu.html',
 		controller:'ControlX'
 	})
 	.when('/aprendiendoAngular',{
 		templateUrl:'templates/Angular/angularAnimate.html',
 		controller:'angularAnimate'
 	})
-	.otherwise('templates/boots.html');
 
-
+*/
 	$locationProvider.html5Mode(false);
 
 });

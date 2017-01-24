@@ -3549,7 +3549,7 @@ tbody.collapse.in {
   overflow: hidden;
   background-color: #e5e5e5;
 }
-.dropdown-menu > li > a {
+.dropdown-menu > div>li > a {
   display: block;
   padding: 3px 20px;
   clear: both;
@@ -3558,8 +3558,8 @@ tbody.collapse.in {
   color: #333;
   white-space: nowrap;
 }
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
+.dropdown-menu > div > li > a:hover,
+.dropdown-menu > div > li > a:focus {
   color: #262626;
   text-decoration: none;
   background-color: #f5f5f5;

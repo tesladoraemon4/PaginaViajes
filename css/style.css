@@ -1,5 +1,32 @@
 
 
+
+.colorError{
+  background-color: red;
+}
+
+
+img{
+  width: 300px;
+  height: 300px;
+  align-self: center;
+}
+
+
+@font-face{
+  font-family: 'minecraft';
+  src:url('../templates/images/Minecrafter.Reg.ttf');
+}
+.tipografia{
+  text-align: center;
+  font-family: minecraft;
+}
+
+a.tipografia{
+  text-align: center;
+}
+
+
 .contenido.ng-enter{/*cuando entra a la animacion*/
 	animation: my_fade_animation_init 0.5s linear;
 	-webkit-animation: my_fade_animation_init 0.5s linear;
@@ -38,22 +65,22 @@
 
 
 
-header{
+header, .color1{
 	background-color:#7BC342;
 }
 
 
-article{
+article, .color2{
 	background-color: #BDC3C6;
 }
 
 
-footer{
+footer, .color3{
 	background-color: #006594;
 }
 
 
-aside{
+aside, .color4{
 	background-color: #6B7552;
 }
 
