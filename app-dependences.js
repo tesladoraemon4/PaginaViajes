@@ -4,35 +4,34 @@
 angular.module('pagina',['ngRoute','ngAnimate','agregarBoton','ui.router'])
 .config(function($urlRouterProvider,$stateProvider) {
 
-
-	/*
+	$urlRouterProvider.otherwise("/");
+	
 	for (var i=0;i<localStorage.length;i++) {
 		var ruta = localStorage.key(i);
 		var nombre = localStorage.getItem(ruta);
 		$stateProvider
-		.state('/'+nombre,
+		.state(nombre,
 			{
+			url:'/'+nombre,
 			templateUrl:ruta,
 			controller:'ControlX'
 		});
 
 	}
-	*/
+	
 	$stateProvider
-	.state('',{
+	.state('/',{
 		url:'/',
 		templateUrl : "templates/home.html",
 		controller : "homeController"
 	})
 	.state('quienesSomos',{
 		url:'/quienesSomos',
-		templateUrl : "templates/quienesSomos.html",
-		controller : "quienesSomosController"
+		templateUrl : "templates/quienesSomos.html"
 	})
 	.state('servicios',{
 		url:'/servicios',
-		templateUrl : "templates/servicios.html",
-		controller : "serviciosController"
+		templateUrl : "templates/servicios.html"
 	})
 	.state('agregarRuta',{
 		url:'/agregarRuta',
