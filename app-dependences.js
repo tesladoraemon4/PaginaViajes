@@ -1,60 +1,57 @@
 'use strict';
 
-angular.module('pagina',['ngRoute','ngAnimate','agregarBoton'])
-.config(function($routeProvider,$locationProvider) {
+
+angular.module('pagina',['ngRoute','ngAnimate','agregarBoton','ui.router'])
+.config(function($urlRouterProvider,$stateProvider) {
 
 
-
-
-	//consultamos las rutas
-	
+	/*
 	for (var i=0;i<localStorage.length;i++) {
 		var ruta = localStorage.key(i);
-		var nombre = localStorage.getItem(x);
-		$routeProvider
-		.when('/'+nombre,
+		var nombre = localStorage.getItem(ruta);
+		$stateProvider
+		.state('/'+nombre,
 			{
 			templateUrl:ruta,
 			controller:'ControlX'
 		});
 
 	}
-
-
-
-
-
-	$routeProvider
-	.when('/',{
+	*/
+	$stateProvider
+	.state('',{
+		url:'/',
 		templateUrl : "templates/home.html",
 		controller : "homeController"
 	})
-	.when('/quienesSomos',{
+	.state('quienesSomos',{
+		url:'/quienesSomos',
 		templateUrl : "templates/quienesSomos.html",
 		controller : "quienesSomosController"
 	})
-	.when('/servicios',{
+	.state('servicios',{
+		url:'/servicios',
 		templateUrl : "templates/servicios.html",
 		controller : "serviciosController"
 	})
-	.when('/agregarRuta',{
+	.state('agregarRuta',{
+		url:'/agregarRuta',
 		templateUrl:'agregar-boton/formularioRutas.html',
 		controller:'formRutas'
-	}).otherwise('templates/boots.html');
+	});
 
 
 /*
 
-	.when('/aprendiendoBoot',{
+	.state('/aprendiendoBoot',{
 		templateUrl:'templates/botonMenu.html',
 		controller:'ControlX'
 	})
-	.when('/aprendiendoAngular',{
+	.state('/aprendiendoAngular',{
 		templateUrl:'templates/Angular/angularAnimate.html',
 		controller:'angularAnimate'
 	})
 
 */
-	$locationProvider.html5Mode(false);
 
 });

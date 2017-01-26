@@ -5,10 +5,10 @@
 	</buttom>
 	<ul class="dropdown-menu" role="menu" aria-labelledby="botoncito">
 		<li role="presentation" class="dropdown-header">Agregar Rutas</li>
-		<li role="presentation"><a role="item" href="#agregarRuta">agregarRuta</a></li>		
+		<li role="presentation"><a role="item" ui-sref="#agregarRuta">agregarRuta</a></li>		
 		<li class="divider"></li>
 		<div class="" ng-repeat="ruta in $ctrl.rutas">
-			<li role="presentation"><a role="item" href="#{{ruta.ruta}}">{{ruta.nombre}}</a></li>
+			<li role="presentation"><a role="item" ui-sref="#{{ruta.nombre}}">{{ruta.nombre}}</a></li>
 		</div>
 	</ul>
 </div>
